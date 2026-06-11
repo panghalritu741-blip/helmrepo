@@ -16,5 +16,4 @@ gettask:
 ui:
    replicas: 3
    image: acrtodoappsiddharth1.azurecr.io/uitask:4
-   
    host: ui.6weathers.com
