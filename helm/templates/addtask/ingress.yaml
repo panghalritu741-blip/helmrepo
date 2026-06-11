@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: add.6weathers.com
+  - host: {{ .Value.addtask.host }}
     http:
       paths:
       - pathType: Prefix

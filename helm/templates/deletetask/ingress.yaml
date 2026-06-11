@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: delete-task.6weathers.com
+  - host: {{ .Values.deletetask.host}}
     http:
       paths:
       - pathType: Prefix

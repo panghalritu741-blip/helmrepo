@@ -6,7 +6,7 @@ metadata:
 
 
 spec:
-  replicas: 3
+  replicas: {{ .Values.ui.replicas }}
 
   selector:
     matchLabels:
@@ -23,5 +23,6 @@ spec:
     spec:
       containers:
       - name: mynginx
-        image: acrtodoappsiddharth1.azurecr.io/uitask:3
+        image: {{ .Values.ui.image }}
         ports:
+         - containerPort: 80

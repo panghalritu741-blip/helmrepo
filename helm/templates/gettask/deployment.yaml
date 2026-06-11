@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: get-tasks
 spec:
-  replicas: 3
+  replicas: {{.Values.gettask.replicas }}
   selector:
     matchLabels:
       app: get-tasks
@@ -16,7 +16,7 @@ spec:
       - name: get-tasks
         env:
           - name: CONNECTION_STRING
-            value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:siddharthsql75785767675.database.windows.net,1433;Database=siddharthdb-dev;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"                                          
-        image: acrtodoappsiddharth1.azurecr.io/gettask:4
+            value: {{.Values.gettask.value }}                                         
+        image: {{.Values.gettask.image }}
         ports:
         - containerPort: 8000

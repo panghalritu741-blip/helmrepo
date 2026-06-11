@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: ui.6weathers.com
+  - host: {{ .Values.ui.host }}
     http:
       paths:
       - path: /

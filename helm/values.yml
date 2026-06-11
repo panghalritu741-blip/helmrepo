@@ -1,0 +1,20 @@
+addtask:
+  replicas: 3
+  image: acrtodoappsiddharth1.azurecr.io/addtask:12
+  value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:siddharthsql75785767675.database.windows.net,1433;Database=siddharthdb-dev;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  host: add.6weathers.com
+deletetask:
+  replicas: 3
+  image: acrtodoappsiddharth1.azurecr.io/deletetask:7
+  value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:siddharthsql75785767675.database.windows.net,1433;Database=siddharthdb-dev;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  host: delete-task.6weathers.com
+gettask:
+   replicas: 3
+   image: acrtodoappsiddharth1.azurecr.io/gettask:4
+   value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:siddharthsql75785767675.database.windows.net,1433;Database=siddharthdb-dev;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+   host: get-tasks.6weathers.com
+ui:
+   replicas: 3
+   image: acrtodoappsiddharth1.azurecr.io/uitask:3
+   
+   host: ui.6weathers.com
